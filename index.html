@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Rock Paper Scissors AI</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎮 Rock Paper Scissors AI</h1>
+
+<p>Play against the Computer</p>
+
+<form action="/play" method="POST">
+
+<select name="choice">
+
+<option>Rock</option>
+
+<option>Paper</option>
+
+<option>Scissors</option>
+
+</select>
+
+<button>
+
+Play
+
+</button>
+
+</form>
+
+{% if result %}
+
+<div class="result">
+
+<h2>{{ result }}</h2>
+
+<p><b>You:</b> {{ user }}</p>
+
+<p><b>Computer:</b> {{ computer }}</p>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+
+</html>
